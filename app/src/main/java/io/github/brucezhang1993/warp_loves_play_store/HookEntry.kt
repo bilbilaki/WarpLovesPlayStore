@@ -15,7 +15,7 @@ object HookEntry : IYukiHookXposedInit {
     }
 
     override fun onHook() = YukiHookAPI.encase {
-        loadApp("com.cloudflare.onedotonedotonedotone") {
+        loadApp("com.cloudflare.cloudflareoneagent") {
             "android.net.VpnService\$Builder".toClass().method {
                 name = "addDisallowedApplication"
                 param(StringClass)
